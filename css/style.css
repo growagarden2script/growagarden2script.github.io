@@ -1,0 +1,188 @@
+
+
+/* ===== DASHBOARD ANIMATIONS ===== */
+
+/* Stat bars — staggered grow animation */
+.stat-bar {
+    width: 4px;
+    border-radius: 2px;
+    background: linear-gradient(to top, #8BDD01, #669B0D);
+    animation: barGrow 1.5s ease-out forwards;
+    transform-origin: bottom;
+    transform: scaleY(0);
+}
+.stat-bar.bar-1 { height: 8px; animation-delay: 0.1s; }
+.stat-bar.bar-2 { height: 14px; animation-delay: 0.2s; }
+.stat-bar.bar-3 { height: 10px; animation-delay: 0.3s; }
+.stat-bar.bar-4 { height: 18px; animation-delay: 0.4s; }
+.stat-bar.bar-5 { height: 12px; animation-delay: 0.5s; }
+.stat-bar.bar-6 { height: 22px; animation-delay: 0.6s; }
+.stat-bar.bar-7 { height: 16px; animation-delay: 0.7s; }
+
+@keyframes barGrow {
+    0% { transform: scaleY(0); opacity: 0; }
+    60% { transform: scaleY(1.15); opacity: 1; }
+    100% { transform: scaleY(1); opacity: 1; }
+}
+
+/* Scanning line — anti-cheat card */
+.animate-smooth-scan {
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.6), transparent);
+    border-radius: 9999px;
+    animation: scanLine 2.5s ease-in-out infinite;
+}
+@keyframes scanLine {
+    0% { left: -40%; }
+    100% { left: 100%; }
+}
+
+/* Progress bar — injection card */
+.animate-smooth-progress {
+    animation: progressFill 2s ease-out forwards, progressGlow 2s ease-in-out infinite 2s;
+    width: 0%;
+}
+@keyframes progressFill {
+    0% { width: 0%; }
+    100% { width: 85%; }
+}
+@keyframes progressGlow {
+    0%, 100% { box-shadow: 0 0 8px rgba(168, 85, 247, 0.4); }
+    50% { box-shadow: 0 0 16px rgba(168, 85, 247, 0.9); }
+}
+
+/* SVG dash animation — bypass card */
+.animate-dash {
+    stroke-dasharray: 80;
+    stroke-dashoffset: 80;
+    animation: dashDraw 2s ease-out forwards;
+}
+@keyframes dashDraw {
+    to { stroke-dashoffset: 0; }
+}
+
+/* Pulse dot */
+.animate-pulse-dot {
+    animation: pulseDot 2s ease-in-out infinite;
+}
+@keyframes pulseDot {
+    0%, 100% { r: 2.5; opacity: 1; }
+    50% { r: 4; opacity: 0.7; }
+}
+
+/* Number count-up glow on hover */
+.dashboard-card {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+.dashboard-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(139, 221, 1, 0.06) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+.dashboard-card:hover::before {
+    opacity: 1;
+}
+.dashboard-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Live badge pulse ring */
+.live-ring {
+    animation: liveRing 2s ease-out infinite;
+}
+@keyframes liveRing {
+    0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5); }
+    70% { box-shadow: 0 0 0 6px rgba(34, 197, 94, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+}
+
+/* Fade-in-up for the whole section */
+.dashboard-reveal {
+    animation: dashboardFadeIn 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+@keyframes dashboardFadeIn {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Card entrance — staggered */
+.card-enter {
+    opacity: 0;
+    transform: translateY(16px) scale(0.97);
+    animation: cardSlideIn 0.6s ease-out forwards;
+}
+.card-enter:nth-child(1) { animation-delay: 0.15s; }
+.card-enter:nth-child(2) { animation-delay: 0.3s; }
+.card-enter:nth-child(3) { animation-delay: 0.45s; }
+.card-enter:nth-child(4) { animation-delay: 0.6s; }
+
+@keyframes cardSlideIn {
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Number shimmer effect */
+.shimmer-text {
+    background: linear-gradient(110deg, #111827 40%, #8BDD01 50%, #111827 60%);
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: shimmer 4s ease-in-out infinite;
+}
+@keyframes shimmer {
+    0%, 100% { background-position: 100% 0; }
+    50% { background-position: -100% 0; }
+}
+
+/* FAQ smooth animation */
+.faq-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.faq-item.open .faq-content {
+    max-height: 300px;
+    opacity: 1;
+    padding-top: 0;
+    padding-bottom: 20px;
+}
+.faq-item.open {
+    border-color: #8BDD01;
+    box-shadow: 0 4px 16px rgba(139, 221, 1, 0.08);
+}
+.faq-item.open .faq-icon {
+    transform: rotate(180deg);
+    color: #8BDD01;
+}
+.faq-item.open .faq-number {
+    background: #8BDD01;
+    color: white;
+    border-color: #8BDD01;
+}
+.faq-item.open .faq-question {
+    color: #8BDD01;
+}
+.faq-icon {
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s ease;
+}
+.faq-number {
+    transition: all 0.3s ease;
+}
+.faq-question {
+    transition: color 0.3s ease;
+}
+

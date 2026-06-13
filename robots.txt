@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Crawl-delay: 0
+Sitemap: https://growagarden2script.github.io/sitemap.xml

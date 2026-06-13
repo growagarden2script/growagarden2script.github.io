@@ -1,0 +1,247 @@
+  body {
+            background-color: #F9FAFB;
+            color: #111827;
+            overflow-x: hidden;
+        }
+/* Glitch Heading Effect */
+.glitch {
+    position: relative;
+    
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+}
+
+.glitch::before {
+    left: 2px;
+    text-shadow: -2px 0 #ccc; 
+    clip: rect(24px, 550px, 90px, 0);
+    animation: glitch-anim-2 3s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+    left: -2px;
+    text-shadow: -2px 0 #fff; 
+    clip: rect(85px, 550px, 140px, 0);
+    animation: glitch-anim 2.5s infinite linear alternate-reverse;
+}
+@keyframes glitch-anim {
+    0% { clip: rect(14px, 9999px, 86px, 0); }
+    20% { clip: rect(78px, 9999px, 4px, 0); }
+    40% { clip: rect(14px, 9999px, 42px, 0); }
+    60% { clip: rect(62px, 9999px, 95px, 0); }
+    80% { clip: rect(32px, 9999px, 12px, 0); }
+    100% { clip: rect(98px, 9999px, 54px, 0); }
+}
+
+@keyframes glitch-anim-2 {
+    0% { clip: rect(65px, 9999px, 100px, 0); }
+    20% { clip: rect(3px, 9999px, 45px, 0); }
+    40% { clip: rect(89px, 9999px, 20px, 0); }
+    60% { clip: rect(12px, 9999px, 78px, 0); }
+    80% { clip: rect(44px, 9999px, 3px, 0); }
+    100% { clip: rect(22px, 9999px, 66px, 0); }
+}
+
+/* Custom Scrollbar for IDE */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+
+        /* Fade animation for update tabs */
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #F9FAFB;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #D1D5DB;
+    border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #9CA3AF;
+}
+
+/* Hide scrollbar for horizontal status bar on mobile */
+.custom-scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+.custom-scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+
+        .bg-grid {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            background-color: #F9FAFB;
+            background-image: 
+                linear-gradient(to bottom, rgba(249,250,251,0) 0%, #F9FAFB 100%),
+                linear-gradient(rgba(139, 221, 1, 0.08) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(139, 221, 1, 0.08) 1px, transparent 1px);
+            background-size: 100% 100%, 80px 80px, 80px 80px; 
+            background-position: center top;
+        }
+
+        /* Hero Text Shimmer Effect */
+        .shimmer-text {
+            background: linear-gradient(135deg, #111827 0%, #8BDD01 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 4px 15px rgba(255, 255, 255, 0.8);         }
+
+        /* Premium Soft Shadows */
+        .shadow-premium {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03), 0 10px 25px -5px rgba(139, 221, 1, 0.05);
+        }
+        .shadow-premium-hover:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02), 0 15px 35px -5px rgba(139, 221, 1, 0.1);
+            transform: translateY(-2px);
+        }
+
+               /* Dot Pattern Background for Download Cards */
+        .bg-dot-pattern {
+            background-image: radial-gradient(rgba(139, 221, 1, 0.15) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .info-list li {
+            position: relative;
+            padding-left: 12px;
+        }
+        .info-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 6px;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: #8BDD01;
+        }
+
+        /* Smooth Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Typewriter Cursor (Dark Terminal) */
+        .cursor {
+            display: inline-block;
+            width: 8px;
+            height: 18px;
+            background-color: #B8E86B;
+            animation: blink 1s step-end infinite;
+            vertical-align: middle;
+            margin-left: 2px;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        /* Accordion transition */
+        .accordion-content {
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        .accordion-content.open {
+            max-height: 300px;
+            opacity: 1;
+        }
+        .accordion-icon {
+            transition: transform 0.3s ease;
+        }
+        .accordion-icon.open {
+            transform: rotate(180deg);
+        }
+
+       /* Enhanced Live Dashboard Animations */
+        @keyframes bar-1 { 0%, 100% { height: 30%; } 50% { height: 70%; } }
+        @keyframes bar-2 { 0%, 100% { height: 50%; } 50% { height: 100%; } }
+        @keyframes bar-3 { 0%, 100% { height: 80%; } 50% { height: 40%; } }
+        @keyframes bar-4 { 0%, 100% { height: 40%; } 50% { height: 90%; } }
+        @keyframes bar-5 { 0%, 100% { height: 60%; } 50% { height: 20%; } }
+        @keyframes bar-6 { 0%, 100% { height: 90%; } 50% { height: 50%; } }
+
+        .stat-bar {
+            width: 4px;
+            border-radius: 4px;
+            background: linear-gradient(to top, #3B82F6, #93C5FD);
+            opacity: 0.9;
+        }
+        .bar-1 { animation: bar-1 1.2s infinite ease-in-out; }
+        .bar-2 { animation: bar-2 1.5s infinite ease-in-out; }
+        .bar-3 { animation: bar-3 1.1s infinite ease-in-out; }
+        .bar-4 { animation: bar-4 1.4s infinite ease-in-out; }
+        .bar-5 { animation: bar-5 1.3s infinite ease-in-out; }
+        .bar-6 { animation: bar-6 1.6s infinite ease-in-out; }
+
+        @keyframes smooth-scan {
+            0% { transform: translateX(-100%); opacity: 0; }
+            20% { opacity: 1; }
+            80% { opacity: 1; }
+            100% { transform: translateX(200%); opacity: 0; }
+        }
+        .animate-smooth-scan {
+            animation: smooth-scan 2.5s infinite cubic-bezier(0.4, 0, 0.2, 1);
+            background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.8), transparent);
+        }
+
+        @keyframes smooth-progress {
+            0% { width: 0%; opacity: 0.8; }
+            15% { opacity: 1; }
+            70% { width: 100%; opacity: 1; }
+            100% { width: 100%; opacity: 0; }
+        }
+        .animate-smooth-progress {
+            animation: smooth-progress 3s infinite cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        @keyframes dash-draw {
+            0% { stroke-dashoffset: 100; opacity: 0;}
+            10% { opacity: 1; }
+            100% { stroke-dashoffset: 0; opacity: 1;}
+        }
+        .animate-dash {
+            stroke-dasharray: 100;
+            stroke-dashoffset: 100;
+            animation: dash-draw 3s infinite cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { transform: scale(0.8); opacity: 0.6; }
+            50% { transform: scale(1.2); opacity: 1; box-shadow: 0 0 8px #F97316; }
+        }
+        .animate-pulse-dot {
+            animation: pulse-dot 2s infinite ease-in-out;
+            transform-origin: center;
+        }
+
+
