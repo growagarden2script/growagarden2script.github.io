@@ -1057,59 +1057,79 @@
             </div>
         </section>
 
-        <!-- Latest Updates Section -->
-        <section id="updates" class="w-full max-w-6xl mx-auto px-4 sm:px-6 mt-8 mb-8 reveal">
-            <div class="flex items-center justify-between border-b border-gray-200 pb-2.5 mb-6">
-                <div class="flex items-center gap-2.5">
-                    <div class="bg-primary/10 p-1.5 rounded-lg text-primary"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" /></svg></div>
-                    <h3 class="font-display text-xl lg:text-2xl text-gray-900 tracking-wide">Latest Updates</h3>
-                </div>
+      <!-- Latest Updates Section -->
+<section id="updates" class="w-full max-w-6xl mx-auto px-4 sm:px-6 mt-8 mb-8 reveal">
+    <div class="flex items-center justify-between border-b border-gray-200 pb-2.5 mb-6">
+        <div class="flex items-center gap-2.5">
+            <div class="bg-primary/10 p-1.5 rounded-lg text-primary"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" /></svg></div>
+            <h3 class="font-display text-xl lg:text-2xl text-gray-900 tracking-wide">Latest Updates</h3>
+        </div>
+    </div>
+    <!-- Update Tabs -->
+    <div class="flex gap-2 mb-6 overflow-x-auto pb-1 custom-scrollbar-hide">
+        <button class="update-tab active px-4 py-2 rounded-xl text-xs font-bold border transition-all whitespace-nowrap bg-primary text-white border-primary shadow-sm" data-tab="v1.1">v1.1 — Stability Update</button>
+        <button class="update-tab px-4 py-2 rounded-xl text-xs font-bold border transition-all whitespace-nowrap bg-white text-gray-500 border-gray-200 hover:border-primary hover:text-primary" data-tab="v1.0">v1.0 — Launch Day</button>
+        <button class="update-tab px-4 py-2 rounded-xl text-xs font-bold border transition-all whitespace-nowrap bg-white text-gray-500 border-gray-200 hover:border-primary hover:text-primary" data-tab="v0.9">v0.9 — Pre-Launch Beta</button>
+    </div>
+    <!-- v1.1 Content -->
+    <div id="update-v1.1" class="update-content active">
+        <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full border border-blue-200">v1.1</span>
+                <span class="text-gray-400 text-xs font-medium">June 27, 2026</span>
+                <span class="bg-green-100 text-green-700 text-[9px] font-bold px-2 py-0.5 rounded uppercase">Hotfix</span>
             </div>
-            <!-- Update Tabs -->
-            <div class="flex gap-2 mb-6 overflow-x-auto pb-1 custom-scrollbar-hide">
-                <button class="update-tab active px-4 py-2 rounded-xl text-xs font-bold border transition-all whitespace-nowrap bg-primary text-white border-primary shadow-sm" data-tab="v1.0">v1.0 — Launch Day</button>
-                <button class="update-tab px-4 py-2 rounded-xl text-xs font-bold border transition-all whitespace-nowrap bg-white text-gray-500 border-gray-200 hover:border-primary hover:text-primary" data-tab="v0.9">v0.9 — Pre-Launch Beta</button>
+            <h4 class="font-display text-xl text-gray-900 mb-3 tracking-wide">Stability & Performance — Mid-Season Patch</h4>
+            <p class="text-sm text-gray-600 mb-4 leading-relaxed">Critical updates addressing connection stability, improved pathfinding accuracy, and enhanced anti-detection measures. Performance optimizations for extended farming sessions with reduced CPU usage.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div class="flex items-start gap-2"><svg class="w-4 h-4 text-blue-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg><span class="text-xs text-gray-600"><strong class="text-gray-800">Connection Stability</strong> — fixed timeout issues during night cycle transitions</span></div>
+                <div class="flex items-start gap-2"><svg class="w-4 h-4 text-blue-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg><span class="text-xs text-gray-600"><strong class="text-gray-800">Pathfinding v2.1</strong> — improved accuracy for obstacle detection on circular map</span></div>
+                <div class="flex items-start gap-2"><svg class="w-4 h-4 text-blue-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg><span class="text-xs text-gray-600"><strong class="text-gray-800">Memory Optimization</strong> — 35% reduction in RAM usage for continuous farming</span></div>
+                <div class="flex items-start gap-2"><svg class="w-4 h-4 text-blue-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg><span class="text-xs text-gray-600"><strong class="text-gray-800">Anti-Detection v3.1</strong> — randomized behavior patterns and signature masking</span></div>
+                <div class="flex items-start gap-2"><svg class="w-4 h-4 text-blue-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg><span class="text-xs text-gray-600"><strong class="text-gray-800">Raid Timing Fix</strong> — corrected guild raid cooldown calculations</span></div>
+                <div class="flex items-start gap-2"><svg class="w-4 h-4 text-blue-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg><span class="text-xs text-gray-600"><strong class="text-gray-800">UI Improvements</strong> — faster load times and better mobile responsiveness</span></div>
             </div>
-            <!-- v1.0 Content -->
-            <div id="update-v1.0" class="update-content active">
-                <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
-                    <div class="flex items-center gap-3 mb-4">
-                        <span class="bg-lime-100 text-lime-700 text-xs font-bold px-3 py-1 rounded-full border border-lime-200">v1.0</span>
-                        <span class="text-gray-400 text-xs font-medium">June 12, 2026</span>
-                        <span class="bg-orange-100 text-orange-700 text-[9px] font-bold px-2 py-0.5 rounded uppercase">Launch</span>
-                    </div>
-                    <h4 class="font-display text-xl text-gray-900 mb-3 tracking-wide">Grow a Garden 2 Day One — Full Feature Release</h4>
-                    <p class="text-sm text-gray-600 mb-4 leading-relaxed">The first official release built from the ground up for Grow a Garden 2. Every module has been rewritten to work with the sequel's new engine, circular map, and night cycle mechanics.</p>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        <div class="flex items-start gap-2"><svg class="w-4 h-4 text-lime-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg><span class="text-xs text-gray-600"><strong class="text-gray-800">Auto Farm</strong> — full circular map pathfinding with smart plot detection</span></div>
-                        <div class="flex items-start gap-2"><svg class="w-4 h-4 text-lime-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg><span class="text-xs text-gray-600"><strong class="text-gray-800">Night Raid Defense</strong> — auto-placement of Dragon's Breath and guard pets</span></div>
-                        <div class="flex items-start gap-2"><svg class="w-4 h-4 text-lime-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg><span class="text-xs text-gray-600"><strong class="text-gray-800">Auto Sell & Bargain</strong> — Sheckle price tracking with auto bargain at Sell Shop</span></div>
-                        <div class="flex items-start gap-2"><svg class="w-4 h-4 text-lime-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg><span class="text-xs text-gray-600"><strong class="text-gray-800">Stealth Raids</strong> — mushroom-powered night stealing from rival gardens</span></div>
-                        <div class="flex items-start gap-2"><svg class="w-4 h-4 text-lime-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg><span class="text-xs text-gray-600"><strong class="text-gray-800">Pet Manager</strong> — auto-assign Deer, Raccoon, Frog, Gnome, Bunny abilities</span></div>
-                        <div class="flex items-start gap-2"><svg class="w-4 h-4 text-lime-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg><span class="text-xs text-gray-600"><strong class="text-gray-800">Guild Support</strong> — auto-join raids, track weekly guild rewards</span></div>
-                    </div>
-                </div>
+        </div>
+    </div>
+    <!-- v1.0 Content -->
+    <div id="update-v1.0" class="update-content hidden">
+        <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-lime-100 text-lime-700 text-xs font-bold px-3 py-1 rounded-full border border-lime-200">v1.0</span>
+                <span class="text-gray-400 text-xs font-medium">June 12, 2026</span>
+                <span class="bg-orange-100 text-orange-700 text-[9px] font-bold px-2 py-0.5 rounded uppercase">Launch</span>
             </div>
-            <!-- v0.9 Content -->
-            <div id="update-v0.9" class="update-content hidden">
-                <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
-                    <div class="flex items-center gap-3 mb-4">
-                        <span class="bg-gray-100 text-gray-700 text-xs font-bold px-3 py-1 rounded-full border border-gray-200">v0.9</span>
-                        <span class="text-gray-400 text-xs font-medium">June 10, 2026</span>
-                        <span class="bg-purple-100 text-purple-700 text-[9px] font-bold px-2 py-0.5 rounded uppercase">Beta</span>
-                    </div>
-                    <h4 class="font-display text-xl text-gray-900 mb-3 tracking-wide">Pre-Launch Beta — Engine Prep</h4>
-                    <p class="text-sm text-gray-600 mb-4 leading-relaxed">Internal beta tested with early access players. Core framework, GUI layout, and anti-detection layers were finalized during this build.</p>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        <div class="flex items-start gap-2"><svg class="w-4 h-4 text-purple-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg><span class="text-xs text-gray-600"><strong class="text-gray-800">Core Engine</strong> — rewrote execution pipeline for Grow a Garden 2's updated Roblox API</span></div>
-                        <div class="flex items-start gap-2"><svg class="w-4 h-4 text-purple-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg><span class="text-xs text-gray-600"><strong class="text-gray-800">Anti-Detection v3</strong> — memory obfuscation and randomized execution timing</span></div>
-                        <div class="flex items-start gap-2"><svg class="w-4 h-4 text-purple-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg><span class="text-xs text-gray-600"><strong class="text-gray-800">Mobile GUI</strong> — touch-friendly controls tested on 15+ Android devices</span></div>
-                        <div class="flex items-start gap-2"><svg class="w-4 h-4 text-purple-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg><span class="text-xs text-gray-600"><strong class="text-gray-800">Loadstring CDN</strong> — moved to faster mirrors for instant no-key delivery</span></div>
-                    </div>
-                </div>
+            <h4 class="font-display text-xl text-gray-900 mb-3 tracking-wide">Grow a Garden 2 Day One — Full Feature Release</h4>
+            <p class="text-sm text-gray-600 mb-4 leading-relaxed">The first official release built from the ground up for Grow a Garden 2. Every module has been rewritten to work with the sequel's new engine, circular map, and night cycle mechanics.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div class="flex items-start gap-2"><svg class="w-4 h-4 text-lime-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg><span class="text-xs text-gray-600"><strong class="text-gray-800">Auto Farm</strong> — full circular map pathfinding with smart plot detection</span></div>
+                <div class="flex items-start gap-2"><svg class="w-4 h-4 text-lime-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg><span class="text-xs text-gray-600"><strong class="text-gray-800">Night Raid Defense</strong> — auto-placement of Dragon's Breath and guard pets</span></div>
+                <div class="flex items-start gap-2"><svg class="w-4 h-4 text-lime-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg><span class="text-xs text-gray-600"><strong class="text-gray-800">Auto Sell & Bargain</strong> — Sheckle price tracking with auto bargain at Sell Shop</span></div>
+                <div class="flex items-start gap-2"><svg class="w-4 h-4 text-lime-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg><span class="text-xs text-gray-600"><strong class="text-gray-800">Stealth Raids</strong> — mushroom-powered night stealing from rival gardens</span></div>
+                <div class="flex items-start gap-2"><svg class="w-4 h-4 text-lime-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg><span class="text-xs text-gray-600"><strong class="text-gray-800">Pet Manager</strong> — auto-assign Deer, Raccoon, Frog, Gnome, Bunny abilities</span></div>
+                <div class="flex items-start gap-2"><svg class="w-4 h-4 text-lime-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg><span class="text-xs text-gray-600"><strong class="text-gray-800">Guild Support</strong> — auto-join raids, track weekly guild rewards</span></div>
             </div>
-        </section>
-
+        </div>
+    </div>
+    <!-- v0.9 Content -->
+    <div id="update-v0.9" class="update-content hidden">
+        <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="bg-gray-100 text-gray-700 text-xs font-bold px-3 py-1 rounded-full border border-gray-200">v0.9</span>
+                <span class="text-gray-400 text-xs font-medium">June 10, 2026</span>
+                <span class="bg-purple-100 text-purple-700 text-[9px] font-bold px-2 py-0.5 rounded uppercase">Beta</span>
+            </div>
+            <h4 class="font-display text-xl text-gray-900 mb-3 tracking-wide">Pre-Launch Beta — Engine Prep</h4>
+            <p class="text-sm text-gray-600 mb-4 leading-relaxed">Internal beta tested with early access players. Core framework, GUI layout, and anti-detection layers were finalized during this build.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div class="flex items-start gap-2"><svg class="w-4 h-4 text-purple-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg><span class="text-xs text-gray-600"><strong class="text-gray-800">Core Engine</strong> — rewrote execution pipeline for Grow a Garden 2's updated Roblox API</span></div>
+                <div class="flex items-start gap-2"><svg class="w-4 h-4 text-purple-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg><span class="text-xs text-gray-600"><strong class="text-gray-800">Anti-Detection v3</strong> — memory obfuscation and randomized execution timing</span></div>
+                <div class="flex items-start gap-2"><svg class="w-4 h-4 text-purple-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg><span class="text-xs text-gray-600"><strong class="text-gray-800">Mobile GUI</strong> — touch-friendly controls tested on 15+ Android devices</span></div>
+                <div class="flex items-start gap-2"><svg class="w-4 h-4 text-purple-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg><span class="text-xs text-gray-600"><strong class="text-gray-800">Loadstring CDN</strong> — moved to faster mirrors for instant no-key delivery</span></div>
+            </div>
+        </div>
+    </div>
+</section>
         
         <!-- Community Reviews Section -->
         <section class="w-full max-w-6xl mx-auto px-4 sm:px-6 mt-8 mb-8 reveal">
